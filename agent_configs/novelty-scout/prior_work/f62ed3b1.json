@@ -1,0 +1,62 @@
+{
+  "_prior_scout": {
+    "max_paper_chars": 60000,
+    "model": "gemini-3-pro-preview",
+    "safe_queries": [
+      "merging collapse model certain combinations prior work 2023 2024",
+      "certain combinations performance degradation tasks prior work 2023 2024",
+      "degradation tasks phenomenon task through prior work 2023 2024",
+      "merging collapse model certain baseline methods",
+      "merging collapse model certain related work survey"
+    ]
+  },
+  "leakage_discard_log": [
+    "Discarded multiple search results from arxivdaily.com, lonepatient.top, themoonlight.io, and openreview.net that explicitly named the paper 'An Empirical Study and Theoretical Explanation on Task-Level Model-Merging Collapse' by Cao et al. These results summarized the paper's exact metrics (HiddenSim) and findings, indicating the paper is already public or under open review, which could leak acceptance or review status."
+  ],
+  "missing_or_underemphasized_citations": "The paper does not appear to cite prior work on task incompatibility in prompting and context, such as Press et al. 2023 (Compositionality Gap), Gupta et al. 2024 (Task Interference), and Di Maio et al. (Multi-Task Prompting Degradation). Including these would better contextualize that 'task incompatibility' is a broader LLM phenomenon not strictly limited to weight merging.",
+  "novelty_risks": "The primary risk is that reviewers might view 'task-level incompatibility' as an already established phenomenon in the multi-task and prompting literature. The empirical finding that some tasks just do not mix well might be seen as expected rather than surprising.",
+  "overlap_assessment": "The submission's empirical observation that 'certain task combinations' fail catastrophically overlaps conceptually with prior work in multi-task prompting and context switching, where specific combinations of tasks are known to cause severe performance degradation. However, the submission investigates this in the distinct setting of parameter-space model merging and provides a novel information-theoretic bound.",
+  "paper_id": "f62ed3b1-e869-423d-a048-35a632c4f7d8",
+  "queries_used": [
+    "merging collapse model certain combinations prior work 2023 2024",
+    "certain combinations performance degradation tasks prior work 2023 2024",
+    "degradation tasks phenomenon task through prior work 2023 2024",
+    "merging collapse model certain baseline methods",
+    "merging collapse model certain related work survey"
+  ],
+  "relevant_prior_work": [
+    {
+      "key_idea": "Identified the 'Compositionality Gap', noting a discrepancy between the success of a composed task and the product of its subtasks, indicating that certain task combinations are inherently difficult for models to handle simultaneously.",
+      "relation_to_submission": "Provides early evidence that task composition is fundamentally challenging, conceptually related to the submission's finding that certain task combinations are incompatible.",
+      "source_evidence": "Search results highlighted Press et al. (2023) discussing the Compositionality Gap where composed tasks underperform compared to subtasks.",
+      "title": "Measuring and Narrowing the Compositionality Gap in Language Models",
+      "url": "https://arxiv.org/abs/2210.03350",
+      "venue_or_source": "arXiv",
+      "why_it_matters_for_novelty": "Shows prior recognition of 'compositional' failure modes in LLMs, though in the context of prompting rather than weight merging. The submission extends this intuition to parameter-space model merging.",
+      "year": 2023
+    },
+    {
+      "key_idea": "LLM performance degrades when a model is forced to switch tasks within a single conversational history due to heterogeneous history interfering with the model's ability to focus.",
+      "relation_to_submission": "Demonstrates that combining tasks leads to interference during inference, parallel to the submission's finding of destructive interference during parameter merging.",
+      "source_evidence": "Search results for 'degradation tasks phenomenon task' identified Gupta et al. (2024) regarding task-switch degradation.",
+      "title": "Task Interference in Large Language Models",
+      "url": "N/A",
+      "venue_or_source": "Research Publication (Gupta et al.)",
+      "why_it_matters_for_novelty": "Highlights that task-level incompatibility is a known phenomenon in multi-task settings, though the submission novelly formalizes this in the model merging paradigm using rate-distortion theory.",
+      "year": 2024
+    },
+    {
+      "key_idea": "Adding multiple tasks to a single prompt leads to non-linear degradation, where certain 'critical task combinations' trigger severe collapses in accuracy.",
+      "relation_to_submission": "Identifies the exact phenomenon of 'catastrophic performance degradation for certain task combinations', but in the context of multi-task prompting rather than model merging.",
+      "source_evidence": "Search results identified Di Maio et al. finding that increasing prompt complexity leads to degradation where certain 'critical task combinations' trigger severe collapses.",
+      "title": "Multi-Task Prompting Degradation",
+      "url": "N/A",
+      "venue_or_source": "MDPI (Di Maio et al.)",
+      "why_it_matters_for_novelty": "This is conceptually very close to the submission's core empirical finding. It implies the task-level incompatibility phenomenon is known in the prompting domain, making the submission's novelty primarily its application to weight merging and its theoretical bounds.",
+      "year": 2024
+    }
+  ],
+  "search_confidence": "High",
+  "strongest_novelty_defense": "The submission's strongest contribution is shifting the model-merging community's focus away from parameter-space conflict metrics to representational incompatibility (HiddenSim). Additionally, the use of rate-distortion theory to establish a dimension-dependent fundamental limit on task mergeability provides a rigorous theoretical foundation that does not exist in the prior prompting-based literature.",
+  "title": "An Empirical Study and Theoretical Explanation on Task-Level Model-Merging Collapse"
+}
