@@ -100,7 +100,7 @@
         "paper_prefix": "230fcebb",
         "title": "Why Depth Matters in Parallelizable Sequence Models: A Lie Algebraic View",
         "score": 7.0,
-        "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/230fcebb/agent_configs/novelty-scout/reasoning/verdict_230fcebb_reasoning.md",
+        "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/230fcebb/agent_configs/novelty-scout/verdict_230fcebb_content.md",
         "status": "in_review"
     },
     {
@@ -108,7 +108,7 @@
         "paper_prefix": "41aa8436",
         "title": "Why Safety Probes Catch Liars But Miss Fanatics",
         "score": 6.5,
-        "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/41aa8436/agent_configs/novelty-scout/reasoning/verdict_41aa8436_reasoning.md",
+        "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/41aa8436/agent_configs/novelty-scout/verdict_41aa8436_content.md",
         "status": "in_review"
     },
     {
@@ -140,7 +140,7 @@
         "paper_prefix": "470d3040",
         "title": "Rethinking Machine Unlearning: Models Designed to Forget via Key Deletion",
         "score": 5.0,
-        "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/470d3040/agent_configs/novelty-scout/reasoning/verdict_470d3040_reasoning.md",
+        "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/470d3040/agent_configs/novelty-scout/verdict_470d3040_content.md",
         "status": "in_review"
     },
     {
@@ -148,7 +148,7 @@
         "paper_prefix": "e593c28f",
         "title": "CLAA: Cross-Layer Attention Aggregation for Accelerating LLM Prefill",
         "score": 5.0,
-        "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/e593c28f/agent_configs/novelty-scout/reasoning/verdict_e593c28f_reasoning.md",
+        "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/e593c28f/agent_configs/novelty-scout/verdict_e593c28f_content.md",
         "status": "in_review"
     },
     {
@@ -156,7 +156,7 @@
         "paper_prefix": "ea4ff055",
         "title": "When Shared Knowledge Hurts: Spectral Over-Accumulation in Model Merging",
         "score": 5.0,
-        "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/ea4ff055/agent_configs/novelty-scout/reasoning/verdict_ea4ff055_reasoning.md",
+        "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/ea4ff055/agent_configs/novelty-scout/verdict_ea4ff055_content.md",
         "status": "in_review"
     },
     {
@@ -164,7 +164,7 @@
         "paper_prefix": "0bb9fe86",
         "title": "Simple Baselines are Competitive with Code Evolution",
         "score": 5.0,
-        "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/0bb9fe86/agent_configs/novelty-scout/reasoning/verdict_0bb9fe86_reasoning.md",
+        "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/0bb9fe86/agent_configs/novelty-scout/verdict_0bb9fe86_content.md",
         "status": "in_review"
     },
     {
@@ -180,7 +180,7 @@
         "paper_prefix": "f62ed3b1",
         "title": "An Empirical Study and Theoretical Explanation on Task-Level Model-Merging Collapse",
         "score": 5.0,
-        "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/f62ed3b1/agent_configs/novelty-scout/reasoning/verdict_f62ed3b1_reasoning.md",
+        "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/f62ed3b1/agent_configs/novelty-scout/verdict_f62ed3b1_content.md",
         "status": "in_review"
     },
     {
@@ -188,7 +188,7 @@
         "paper_prefix": "55682ec0",
         "title": "Towards a Science of AI Agent Reliability",
         "score": 5.0,
-        "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/55682ec0/agent_configs/novelty-scout/reasoning/verdict_55682ec0_reasoning.md",
+        "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/55682ec0/agent_configs/novelty-scout/verdict_55682ec0_content.md",
         "status": "in_review"
     },
     {
@@ -196,7 +196,7 @@
         "paper_prefix": "3acba0e1",
         "title": "Follow the Clues, Frame the Truth: Hybrid-evidential Deductive Reasoning in Open-Vocabulary Multimodal Emotion Recognition",
         "score": 5.5,
-        "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/3acba0e1/agent_configs/novelty-scout/reasoning/verdict_3acba0e1_reasoning.md",
+        "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/3acba0e1/agent_configs/novelty-scout/verdict_3acba0e1_content.md",
         "status": "in_review"
     },
     {
@@ -204,7 +204,7 @@
         "paper_prefix": "8b923d8f",
         "title": "BFS-PO: Best-First Search for Large Reasoning Models",
         "score": 5.5,
-        "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/8b923d8f/agent_configs/novelty-scout/reasoning/verdict_8b923d8f_reasoning.md",
+        "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/8b923d8f/agent_configs/novelty-scout/verdict_8b923d8f_content.md",
         "status": "in_review"
     },
     {
@@ -220,7 +220,7 @@
         "paper_prefix": "654a43e3",
         "title": "Multimodal Fact-Level Attribution for Verifiable Reasoning",
         "score": 5.0,
-        "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/654a43e3/agent_configs/novelty-scout/reasoning/verdict_654a43e3_reasoning.md",
+        "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/654a43e3/agent_configs/novelty-scout/verdict_654a43e3_content.md",
         "status": "in_review"
     },
     {
@@ -228,7 +228,7 @@
         "paper_prefix": "27ee28cc",
         "title": "Towards Anytime-Valid Statistical Watermarking",
         "score": 5.0,
-        "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/27ee28cc/agent_configs/novelty-scout/reasoning/verdict_27ee28cc_reasoning.md",
+        "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/27ee28cc/agent_configs/novelty-scout/verdict_27ee28cc_content.md",
         "status": "in_review"
     },
     {
