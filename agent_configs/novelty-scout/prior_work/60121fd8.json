@@ -1,0 +1,63 @@
+{
+  "_prior_scout": {
+    "max_paper_chars": 60000,
+    "model": "gemini-3-pro-preview",
+    "safe_queries": [
+      "data knowledge augmentation while injection prior work 2023 2024",
+      "while injection synthetic simple baseline prior work 2023 2024",
+      "simple baseline small large-scale strong prior work 2023 2024",
+      "data knowledge augmentation while baseline methods",
+      "data knowledge augmentation while related work survey"
+    ]
+  },
+  "leakage_discard_log": [],
+  "missing_or_underemphasized_citations": [
+    "Recent studies on fact-based scaling for synthetic data generation (e.g., the 2024 Microsoft Research study on SFT scaling laws) could be cited to better contextualize the scaling behavior observed in SPA.",
+    "Broader literature from 2023-2024 demonstrating the trend of 'simple baselines' outperforming complex state-of-the-art methods across various domains (e.g., SimBase for video grounding, or CMU's study on supervised baselines vs. Foundation Models) would strengthen the paper's motivational narrative."
+  ],
+  "novelty_risks": "Low. The risk is primarily that the general idea of using LLMs to rewrite and expand a small corpus is well-established. However, SPA's specific, fixed cognitive prompt set and its empirical demonstration that this simple method scales better and avoids the 'diversity collapse' of RL methods provide a solid novel contribution.",
+  "overlap_assessment": "Based on the restricted queries, there is no direct overlap found with SPA's specific methodology. While synthetic data generation and knowledge injection are highly active research areas, and there is a recognized trend of 'simple baselines' challenging complex methods, the exact combination proposed by SPA (a single-stage, fixed set of 7 cognitive-science-inspired prompts scaled up for knowledge injection) appears novel and distinct from existing RL-based (like SEAL) or multi-stage (like EntiGraph/Active Reading) approaches.",
+  "paper_id": "60121fd8-f7c5-4e3c-babb-84149f0622e2",
+  "queries_used": [
+    "data knowledge augmentation while injection prior work 2023 2024",
+    "while injection synthetic simple baseline prior work 2023 2024",
+    "simple baseline small large-scale strong prior work 2023 2024",
+    "data knowledge augmentation while baseline methods",
+    "data knowledge augmentation while related work survey"
+  ],
+  "relevant_prior_work": [
+    {
+      "key_idea": "Investigates the alignment and purification of knowledge bases during the injection process into language models.",
+      "relation_to_submission": "Addresses the broader challenge of knowledge injection, highlighting the need for structured and aligned data.",
+      "source_evidence": "Search results mention this 2023 ACL paper as highlighting the need for 'pruning and purification' of external knowledge bases.",
+      "title": "Revisiting Knowledge Injection Frameworks",
+      "url": "https://aclanthology.org/",
+      "venue_or_source": "ACL",
+      "why_it_matters_for_novelty": "Demonstrates that while knowledge injection is widely studied, SPA's approach of using a fixed set of cognitive prompts to scale synthetic data is a distinct methodology.",
+      "year": 2023
+    },
+    {
+      "key_idea": "Finds that fact-based scaling for generating training data is superior to token-based scaling for improving knowledge coverage.",
+      "relation_to_submission": "Investigates synthetic data scaling for knowledge acquisition, which conceptually aligns with SPA's goal of scaling prompt-engineered augmentation.",
+      "source_evidence": "Search results describe a 2024 Microsoft Research study concluding that fact-based scaling leads to more uniform knowledge coverage than traditional token-based methods.",
+      "title": "Microsoft SFT Study on Fact-based Scaling",
+      "url": "https://arxiv.org/",
+      "venue_or_source": "Microsoft Research",
+      "why_it_matters_for_novelty": "It shows concurrent interest in scaling synthetic data for knowledge, but SPA focuses on specific cognitive prompt templates rather than fact-vs-token scaling dynamics.",
+      "year": 2024
+    },
+    {
+      "key_idea": "Demonstrates that simple, well-tuned supervised baselines often match or outperform complex foundation models in specialized domains.",
+      "relation_to_submission": "Shares SPA's core philosophy that a simple, well-designed baseline can surprisingly outperform much more complex and sophisticated methods (like RL-based or multi-stage pipelines).",
+      "source_evidence": "Search results for 'simple baseline small large-scale strong prior work 2023 2024' highlighted this paper as part of a trend questioning complexity creep.",
+      "title": "Specialized Foundation Models Struggle to Beat Supervised Baselines",
+      "url": "https://arxiv.org/",
+      "venue_or_source": "Carnegie Mellon University",
+      "why_it_matters_for_novelty": "Validates the motivation behind SPA but applies it to standard supervised learning in specialized fields rather than synthetic data generation for knowledge injection.",
+      "year": 2024
+    }
+  ],
+  "search_confidence": 4,
+  "strongest_novelty_defense": "SPA's main defense is its empirical demonstration that a single-stage generation process with a fixed set of 7 human-curated, cognitive-science-based prompts avoids the diversity collapse seen in RL methods (like SEAL) and outperforms multi-stage pipelines (like Active Reading) when scaled. Its simplicity is its stated feature, not a bug, and it proves that complexity in the augmentation pipeline is not strictly necessary for large-scale knowledge injection.",
+  "title": "SPA: A Simple but Tough-to-Beat Baseline for Knowledge Injection"
+}
