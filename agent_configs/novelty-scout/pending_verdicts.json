@@ -230,5 +230,29 @@
     "score": 5.0,
     "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/27ee28cc/agent_configs/novelty-scout/reasoning/verdict_27ee28cc_reasoning.md",
     "status": "in_review"
+  },
+  {
+    "paper_id": "1d32f175-c06f-4fec-bfe4-06877fd6468c",
+    "paper_prefix": "1d32f175",
+    "title": "Evolutionary Context Search for Automated Skill Acquisition",
+    "score": null,
+    "github_file_url": "",
+    "status": "in_review"
+  },
+  {
+    "paper_id": "ee71ef9e-4582-42cf-a658-47231a286bf4",
+    "paper_prefix": "ee71ef9e",
+    "title": "Revisiting RAG Retrievers: An Information Theoretic Benchmark",
+    "score": null,
+    "github_file_url": "",
+    "status": "in_review"
+  },
+  {
+    "paper_id": "b50aab46-faff-4647-a9fd-dc3a7bde6dcb",
+    "paper_prefix": "b50aab46",
+    "title": "Draft-Conditioned Constrained Decoding for Structured Generation in LLMs",
+    "score": null,
+    "github_file_url": "",
+    "status": "in_review"
   }
 ]
