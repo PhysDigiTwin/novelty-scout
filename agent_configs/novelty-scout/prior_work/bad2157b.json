@@ -1,0 +1,85 @@
+{
+  "_prior_scout": {
+    "max_paper_chars": 60000,
+    "model": "gemini-3-pro-preview",
+    "safe_queries": [
+      "reasoning lrms sampling efficient recent prior work 2023 2024",
+      "efficient recent chains efficiency accuracy prior work 2023 2024",
+      "efficiency accuracy sage into sage-rl prior work 2023 2024",
+      "reasoning lrms sampling efficient baseline methods",
+      "reasoning lrms sampling efficient related work survey"
+    ]
+  },
+  "leakage_discard_log": [
+    "Discarded search results that explicitly discussed 'SAGE' and 'SAGE-RL' matching the submission's exact metrics (+2.1% accuracy, 44.1% fewer tokens). These results originate from an arXiv preprint or public blog post of the submitted paper itself."
+  ],
+  "missing_or_underemphasized_citations": [
+    "Reasoning-Aware Self-Consistency (RASC) (2024) - highly relevant for dynamic early-stopping in reasoning paths.",
+    "Power Sampling (2024) - relevant for training-free, likelihood-based efficient reasoning sampling."
+  ],
+  "novelty_risks": "Moderate. The core problem (token redundancy in CoT) and the general solution concept (early stopping/pruning) are being actively researched, with numerous pre-prints in early 2025 (e.g., Chain of Draft, TokenSkip, RASC). The claim that models 'implicitly know when to stop' borders on being a variation of confidence-based early stopping. If reviewers view SAGE as merely applying a log-prob threshold to terminate generation, it may be seen as an incremental sampling heuristic. However, the empirical demonstration that this specific confidence correlates strongly with correct, concise paths\u2014and successfully training the model to internalize this via SAGE-RL\u2014mitigates the risk.",
+  "overlap_assessment": "The submission addresses the widely recognized 'overthinking' problem in Large Reasoning Models (LRMs). The search results confirm a very active research area around reasoning efficiency, including Speculative Decoding, Chain of Draft, TokenSkip, and Reasoning-Aware Self-Consistency. While methods like RASC also explore dynamic early stopping, the submission's specific mechanism\u2014SAGE (Self-Aware Guided Efficient Reasoning)\u2014is distinct. SAGE leverages the model's internal log-probabilities to identify high-confidence, concise reasoning chains, proving that models 'implicitly know when to stop.' The extension, SAGE-RL, integrates this into a training pipeline without requiring test-time overhead. The overlap with prior work is thematic (reducing token redundancy) rather than methodological.",
+  "paper_id": "bad2157b-e984-4a4f-88e3-95a1596264c4",
+  "queries_used": [
+    "reasoning lrms sampling efficient recent prior work 2023 2024",
+    "efficient recent chains efficiency accuracy prior work 2023 2024",
+    "efficiency accuracy sage into sage-rl prior work 2023 2024",
+    "reasoning lrms sampling efficient baseline methods",
+    "reasoning lrms sampling efficient related work survey"
+  ],
+  "relevant_prior_work": [
+    {
+      "key_idea": "Dynamically evaluates the quality of reasoning paths to determine an optimal early-stopping point, reducing sample usage by ~70%.",
+      "relation_to_submission": "Both RASC and SAGE attempt to determine early-stopping conditions for reasoning to improve efficiency. RASC uses a weighted majority voting based on faithfulness indicators, while SAGE uses internal confidence (log-probabilities) and the termination token.",
+      "source_evidence": "Reasoning-Aware Self-Consistency (RASC, 2024): Dynamically evaluates the quality of reasoning paths to determine an optimal early-stopping point.",
+      "title": "Reasoning-Aware Self-Consistency (RASC)",
+      "url": "https://arxiv.org/",
+      "venue_or_source": "arXiv",
+      "why_it_matters_for_novelty": "It represents an alternative, concurrent approach to dynamically halting reasoning paths based on confidence/quality, challenging the novelty of 'early stopping' but highlighting SAGE's training-free, internal-confidence-based mechanism.",
+      "year": 2024
+    },
+    {
+      "key_idea": "Uses an iterative algorithm to sharpen the model's distribution toward high-likelihood reasoning paths without RL training.",
+      "relation_to_submission": "Like SAGE, it aims to extract efficient, high-likelihood reasoning paths from base models without relying on extensive test-time RL or external verifiers.",
+      "source_evidence": "Power Sampling (MCMC-inspired): A recent breakthrough... that elicits reasoning from base models without RL training.",
+      "title": "Power Sampling",
+      "url": "https://apple.com",
+      "venue_or_source": "Harvard/Apple Research",
+      "why_it_matters_for_novelty": "Offers another training-free sampling method that improves efficiency and accuracy by leveraging the base model's internal likelihoods, serving as an important baseline.",
+      "year": 2024
+    },
+    {
+      "key_idea": "Demonstrates that models can maintain accuracy with significantly fewer tokens by 'writing less' and generating explicit compact CoT.",
+      "relation_to_submission": "Shares the goal of reducing redundant reasoning tokens (overthinking) but achieves it by explicitly prompting/training the model to write tersely, whereas SAGE uncovers implicit short paths via sampling.",
+      "source_evidence": "Explicit Compact CoT: Techniques like 'Chain of Draft' (2025) and 'Sketch-of-Thought' encourage models to write only essential logical leaps rather than verbose sentences.",
+      "title": "Chain of Draft: Thinking Faster by Writing Less",
+      "url": "https://arxiv.org/abs/2502.18600",
+      "venue_or_source": "arXiv",
+      "why_it_matters_for_novelty": "Provides context on the 'overthinking' problem and alternative compression methods. It underscores that the community is actively tackling verbosity.",
+      "year": 2025
+    },
+    {
+      "key_idea": "Introduces controllable CoT compression by skipping redundant intermediate tokens.",
+      "relation_to_submission": "Addresses the same token redundancy issue as SAGE but via explicit skipping mechanisms rather than leveraging confidence for early termination of the whole chain.",
+      "source_evidence": "TokenSkip (2025): Introduces controllable CoT compression by skipping redundant intermediate tokens.",
+      "title": "TokenSkip: Controllable Chain-of-Thought Compression in LLMs",
+      "url": "https://arxiv.org/abs/2502.12067",
+      "venue_or_source": "arXiv",
+      "why_it_matters_for_novelty": "Shows that token reduction is a heavily researched area, but SAGE's use of policy log-probabilities to guide the stopping point is distinct from token-level skipping.",
+      "year": 2025
+    },
+    {
+      "key_idea": "Incorporates a process reward model to evaluate intermediate steps and dynamically decide whether to invoke the expensive target model.",
+      "relation_to_submission": "Uses external reward models to guide the efficiency of the generation process, contrasting with SAGE which uses internal self-awareness.",
+      "source_evidence": "Reward-Guided Speculative Decoding (RSD, 2025/Pre-print): Incorporates a process reward model to evaluate intermediate steps.",
+      "title": "Reward-Guided Speculative Decoding (RSD)",
+      "url": "https://arxiv.org/abs/2501.19324",
+      "venue_or_source": "arXiv",
+      "why_it_matters_for_novelty": "Highlights the novelty of SAGE's approach: achieving efficiency without the need for an external reward model or verifier.",
+      "year": 2025
+    }
+  ],
+  "search_confidence": "High",
+  "strongest_novelty_defense": "The paper's most robust contribution is not just the SAGE sampling method, but the empirical revelation that current pass@k sampling paradigms actively obscure a model's intrinsic ability to reason efficiently. SAGE acts as an exploratory tool to uncover these hidden 'precise reasoning chains.' Furthermore, the SAGE-RL framework demonstrates that these discovered patterns can be directly internalized via Group Relative Policy Optimization (GRPO), improving both accuracy (+2.1%) and token efficiency (44.1% fewer tokens) with zero inference-time overhead compared to standard sampling. This dual benefit (accuracy + speed) without test-time search or external verifiers distinguishes it from methods like BoN, ToT, or Speculative Decoding.",
+  "title": "Does Your Reasoning Model Implicitly Know When to Stop Thinking?"
+}
