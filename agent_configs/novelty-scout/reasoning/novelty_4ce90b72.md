@@ -7,21 +7,21 @@
 - Model: gemini-3-pro-preview
 - Search confidence: High (0.95)
 - Overlap assessment: The submission shares the core crosscoder architecture, the BatchTopK sparsity mechanism, and shared/unshared latent partitioning with prior work. The main divergence is the explicit delta-based loss term combined with contrastive paired data.
-- Novelty risks: Combining known crosscoder fixes (BatchTopK, latent partitioning) with a difference loss could be viewed as somewhat incremental.
+- Novelty risks: Moderate-to-High. The novelty heavily depends on the delta-based loss and contrastive data formulation, given other components are adopted from existing literature.
 
 ## Key Prior Work Cited by the Paper
-1. **Lindsey et al. (2024)** - Introduced crosscoders.
-2. **Bussmann et al. (2024)** - Proposed the BatchTopK sparsity mechanism.
-3. **Mishra-Sharma et al. (2024)** & **Jiralerspong & Bricken (2025)** - Introduced shared/unshared latent partitioning for isolating features.
-4. **Minder et al. (2025b)** - Demonstrated Activation Difference Lens (ADL) to read traces in activation differences.
-5. **Wang et al. (2025a)** - Captured misalignment by taking explicit activation differences.
+1. **Lindsey et al. (2024)** - Core crosscoder architecture.
+2. **Bussmann et al. (2024)** - BatchTopK sparsity mechanism.
+3. **Mishra-Sharma et al. (2024) / Jiralerspong & Bricken (2025)** - Shared/unshared latent partitioning.
+4. **Minder et al. (2025b)** - Activation Difference Lens (ADL).
+5. **Wang et al. (2025a)** - Capturing emergent misalignment via activation differences.
 
 ## Paper's Novelty Claim
-The paper claims novelty by combining a Delta-based auxiliary loss ($L_\Delta$) with contrastive text pairs to prioritize activation differences, along with shared feature masking and BatchTopK, to isolate fine-tuning-specific features in narrow regimes.
+The paper claims novelty in introducing a "Delta-Crosscoder" that combines Dual-K sparsity and shared feature masking to isolate fine-tuning-specific features, primarily relying on a delta-based auxiliary loss $L_\Delta$ prioritizing activation differences and utilizing contrastive text pairs. It claims this enables robust model diffing in narrow fine-tuning regimes where traditional approaches fail.
 
-## Novelty Audit
-While the presentation is elegant, the architectural and conceptual novelty is highly constrained. The core architectural elements (crosscoders, BatchTopK, shared feature masking) are explicitly adopted from recent prior work. The primary conceptual contribution—using activation differences to isolate fine-tuning changes—has already been established by Minder et al. (2025b) and Wang et al. (2025a). 
+## Novelty Audit & Synthesis
+While the Delta-Crosscoder demonstrates empirical success (outperforming SAE-based baselines on 10/10 organisms), the foundational architectural components—specifically the Dual-K shared/non-shared partitioning and the BatchTopK sparsity—are directly adopted from prior work (Mishra-Sharma et al. 2024; Bussmann et al. 2024). The paper's true original contribution narrows down to:
+1. The formulation of the explicit delta-based auxiliary loss $L_\Delta$.
+2. The specific contrastive paired data construction pipeline.
 
-The paper's true contribution is not a new fundamental capability, but an engineering synthesis: combining these known techniques (contrastive data + delta loss + partitioned crosscoders) into a unified pipeline. While this synthesis appears practically useful (outperforming SAE-based baselines on 10/10 organisms), the framing of the paper somewhat overstates the foundational novelty of the approach. The introduction of the $L_\Delta$ term represents an incremental methodological refinement rather than a paradigm shift.
-
-**Verdict:** The paper offers a valuable engineering synthesis but faces high novelty risks regarding its conceptual claims. The individual components are well-known, and their combination yields expected improvements without revealing new fundamental mechanisms.
+However, utilizing activation differences to identify fine-tuning-induced changes is conceptually well-trodden (Minder et al. 2025b, Wang et al. 2025a). The delta-loss formulation also risks being biased toward high-amplitude directions and missing distributed shifts, a limitation not fully explored. The paper's framing as a wholly new architecture slightly overstates the structural novelty of the approach, which acts more as a synthesis of existing techniques combined with a novel training objective.
