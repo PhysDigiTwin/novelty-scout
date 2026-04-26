@@ -1,0 +1,65 @@
+{
+  "_prior_scout": {
+    "max_paper_chars": 60000,
+    "model": "gemini-3-pro-preview",
+    "safe_queries": [
+      "singular model values merging updates prior work 2023 2024",
+      "merging updates task shared directions prior work 2023 2024",
+      "shared directions improves performance combines prior work 2023 2024",
+      "singular model values merging baseline methods",
+      "singular model values merging related work survey"
+    ]
+  },
+  "leakage_discard_log": [],
+  "missing_or_underemphasized_citations": [
+    "Crowded in B-Space: Calibrating Shared Directions for LoRA Merging (Tang & Yang, ICML 2024)"
+  ],
+  "novelty_risks": [
+    "The core problem identified ('spectral over-counting of shared directions') was previously identified as 'merge interference from over-shared directions' in LoRA merging by Tang & Yang (2024).",
+    "The proposed solution (Singular Value Calibration) is mathematically and conceptually equivalent to Pico (Tang & Yang, 2024) applied to full-weight matrices via SVD rather than explicitly low-rank LoRA factors."
+  ],
+  "overlap_assessment": "High conceptual overlap with Tang & Yang (2024). Both works identify that simple merging overemphasizes 'shared directions' (or 'spectral over-accumulation') in the output space (column-space left singular vectors in this paper, LoRA B matrices in Tang & Yang). Both works propose a data-free calibration step to downscale these over-represented components to restore balance.",
+  "paper_id": "ea4ff055-3837-4e12-bd02-7a2037a8b96e",
+  "queries_used": [
+    "singular model values merging updates prior work 2023 2024",
+    "merging updates task shared directions prior work 2023 2024",
+    "shared directions improves performance combines prior work 2023 2024",
+    "singular model values merging baseline methods",
+    "singular model values merging related work survey"
+  ],
+  "relevant_prior_work": [
+    {
+      "key_idea": "Identifies that when merging multiple LoRA adapters, output-side matrices (B) tend to share a small set of directions. Naive merging overemphasizes these shared directions (merge interference), destroying task-specific information. Proposes Pico, a data-free method to identify over-shared directions, downscale them before merging, and rescale the final update.",
+      "relation_to_submission": "The submission discovers that shared knowledge aligns across tasks in spectral subspaces, causing 'spectral over-accumulation' and singular-value inflation, and fixes this by rescaling inflated singular values in column-space. This is conceptually identical to Tang & Yang's identification of 'over-shared directions' in LoRA B-matrices (which correspond to output/column space) and their calibration approach (Pico).",
+      "source_evidence": "Search result for 'shared directions improves performance combines prior work 2023 2024' describing Tang & Yang (2024).",
+      "title": "Crowded in B-Space: Calibrating Shared Directions for LoRA Merging",
+      "url": "https://arxiv.org/abs/2405.17402",
+      "venue_or_source": "ICML 2024",
+      "why_it_matters_for_novelty": "It preempts the submission's core theoretical contribution (the phenomenon of over-accumulating shared directions) and the essence of its solution (calibrating/downscaling those shared directions). The submission presents this as a novel discovery, but it was already presented at ICML 2024 for LoRA architectures.",
+      "year": 2024
+    },
+    {
+      "key_idea": "Analyzes task vectors at the layer level using SVD, finding task matrices are low-rank. Uses singular vectors to reduce task interference.",
+      "relation_to_submission": "The submission cites TSV-M as a baseline. Both works use SVD to decompose task matrices and operate on the singular vector spaces to manage inter-task interference.",
+      "source_evidence": "Search result for 'singular model values merging updates prior work 2023 2024'.",
+      "title": "Task Singular Vectors: Reducing Task Interference in Model Merging",
+      "url": "",
+      "venue_or_source": "ArXiv",
+      "why_it_matters_for_novelty": "Contextualizes the submission within a known subfield of SVD-based merging methods.",
+      "year": 2024
+    },
+    {
+      "key_idea": "Leverages SVD to identify feature bases (left singular vectors for output, right for input) to optimally combine models while preserving input-output mappings.",
+      "relation_to_submission": "Another concurrent/recent work using SVD (left/right singular vectors) to improve merging.",
+      "source_evidence": "Search result for 'singular model values merging updates prior work 2023 2024'.",
+      "title": "Superpose Singular Features for Model Merging (SFTM)",
+      "url": "",
+      "venue_or_source": "ArXiv",
+      "why_it_matters_for_novelty": "Further demonstrates that decomposing task matrices via SVD for structural merging is highly active.",
+      "year": 2025
+    }
+  ],
+  "search_confidence": "High. The search identified a highly relevant, un-cited prior work (Pico, ICML 2024) that directly anticipates the submission's core phenomenon and mitigation strategy.",
+  "strongest_novelty_defense": "The submission extends the insight from explicitly low-rank, LoRA-specific architectures (where factors A and B are readily available) to general full-weight fine-tuning. It dynamically extracts the spectral subspaces via SVD and formulates a principled post-processing calibration (SVC) directly on the singular values.",
+  "title": "When Shared Knowledge Hurts: Spectral Over-Accumulation in Model Merging"
+}
