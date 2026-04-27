@@ -1,0 +1,89 @@
+{
+  "_prior_scout": {
+    "max_paper_chars": 60000,
+    "model": "gemini-3-pro-preview",
+    "safe_queries": [
+      "reasoning faithrl reinforcement learning rewards prior work 2023 2024",
+      "learning rewards rlvr steps over-confidence prior work 2023 2024",
+      "steps over-confidence increases faithfulness objective prior work 2023 2024",
+      "reasoning faithrl reinforcement learning baseline methods",
+      "reasoning faithrl reinforcement learning related work survey"
+    ]
+  },
+  "leakage_discard_log": [
+    "Discarded search results explicitly mentioning 'FaithRL: Learning to Reason Faithfully through Step-Level Faithfulness Maximization (Gui et al., Feb 2026)' as this is the exact paper under review, revealing the authors (Gui et al.) and publication timeframe.",
+    "Discarded search results discussing the concurrent 2026 work 'FaithRL: Stop Rewarding Hallucinated Steps (for Small Reasoning Models)' to avoid conflating with the submission's direct reception or identical naming."
+  ],
+  "missing_or_underemphasized_citations": [
+    "Let\u2019s Verify Step by Step (Lightman et al., 2023)",
+    "Don't Think Twice! Over-Reasoning Impairs Confidence Calibration (2024)",
+    "Less Approximates More (2024) - for Progressive Reasoning Gain",
+    "Decoupling Reasoning and Confidence (DCPO, 2024)",
+    "Progressively Ascending Confidence Reward (PACR, 2024)"
+  ],
+  "novelty_risks": "High risk regarding the conceptual novelty of step-level supervision for reasoning (as PRMs already achieved this). Moderate risk regarding the identification of RLVR-induced over-confidence, as several 2024 papers formalized this exact problem. The novelty rests heavily on the specific mathematical formulation of the 'Truthful Helpfulness Score', 'geometric reward', and the GRPO 'advantage modulation' mechanism.",
+  "overlap_assessment": "The submission addresses a well-documented problem in RLVR\u2014that sparse, outcome-based rewards lead to spurious reasoning and over-confidence. Prior works like 'Decoupling Reasoning and Confidence' and 'Don't Think Twice!' have extensively identified and analyzed this phenomenon. Furthermore, step-level supervision is well-established through Process Reward Models (PRMs) (Lightman et al., 2023), and progressive step verification mechanisms were explored in works like 'Less Approximates More' and 'PACR'. The submission's specific formulation of a 'geometric reward' mapped to 'Truthful Helpfulness Score' and 'faithfulness-aware advantage modulation' represents a novel algorithmic approach, but the underlying problem formulation and concepts of step-level faithfulness and over-confidence mitigation are heavily preceded by 2023-2024 work.",
+  "paper_id": "7f9bf4a2-9bbe-44f8-9b45-56a2b7493a0d",
+  "queries_used": [
+    "reasoning faithrl reinforcement learning rewards prior work 2023 2024",
+    "learning rewards rlvr steps over-confidence prior work 2023 2024",
+    "steps over-confidence increases faithfulness objective prior work 2023 2024",
+    "reasoning faithrl reinforcement learning baseline methods",
+    "reasoning faithrl reinforcement learning related work survey"
+  ],
+  "relevant_prior_work": [
+    {
+      "key_idea": "Introduced Process Reward Models (PRMs) to provide step-level supervision for reasoning tasks, showing it outperforms outcome supervision.",
+      "relation_to_submission": "The submission also focuses on step-level supervision but replaces human-trained PRMs with an objective rule-based verification approach based on provided knowledge.",
+      "source_evidence": "Search results identify it as the seminal 2023 work introducing PRMs.",
+      "title": "Let\u2019s Verify Step by Step",
+      "url": "https://arxiv.org/abs/2305.20050",
+      "venue_or_source": "OpenAI",
+      "why_it_matters_for_novelty": "It is the foundational work for step-level reasoning supervision (process vs. outcome rewards), which the submission builds upon.",
+      "year": 2023
+    },
+    {
+      "key_idea": "Demonstrates that increasing the reasoning budget (number of steps) leads to 'overthinking', causing models to rationalize incorrect answers and become systematically over-confident.",
+      "relation_to_submission": "Empirically supports the submission's core premise that long reasoning chains in RLVR lead to spurious reasoning and over-confidence.",
+      "source_evidence": "Search results highlight this as a key 2024 finding on the tension between reasoning steps and confidence calibration.",
+      "title": "Don't Think Twice! Over-Reasoning Impairs Confidence Calibration",
+      "url": "",
+      "venue_or_source": "arXiv",
+      "why_it_matters_for_novelty": "Provides existing empirical evidence for the exact behavioral phenomenon the submission targets.",
+      "year": 2024
+    },
+    {
+      "key_idea": "Introduces Progressive Reasoning Gain (PRG) to measure whether each reasoning step progressively strengthens the support for the final answer.",
+      "relation_to_submission": "Shares the goal of evaluating the incremental validity of each step to penalize factually unwarranted overconfidence.",
+      "source_evidence": "Search results mention PRG from this paper as a step-level metric.",
+      "title": "Less Approximates More",
+      "url": "",
+      "venue_or_source": "arXiv",
+      "why_it_matters_for_novelty": "Demonstrates a prior method for step-wise evaluation of reasoning validity that conceptually mirrors the submission's step-level advantage modulation.",
+      "year": 2024
+    },
+    {
+      "key_idea": "Identifies that RLVR-trained models suffer from severe calibration degeneration and over-confidence due to gradient conflicts.",
+      "relation_to_submission": "Directly addresses RLVR-induced over-confidence, similar to the submission, but solves it by decoupling objectives.",
+      "source_evidence": "Search results name DCPO as a key 2024 paper analyzing calibration degeneration in RLVR.",
+      "title": "Decoupling Reasoning and Confidence (DCPO)",
+      "url": "",
+      "venue_or_source": "arXiv",
+      "why_it_matters_for_novelty": "Shows contemporaneous recognition of the RLVR over-confidence problem and proposes alternative algorithmic solutions.",
+      "year": 2024
+    },
+    {
+      "key_idea": "Provides a dense, model-intrinsic reward that assumes confidence should steadily increase across valid reasoning steps.",
+      "relation_to_submission": "Like the submission, it tackles the sparse reward problem in RLVR by introducing step-wise reward mechanisms related to confidence progression.",
+      "source_evidence": "Search results cite PACR (2024) as a method addressing sparse rewards via confidence ascent.",
+      "title": "Progressively Ascending Confidence Reward (PACR)",
+      "url": "",
+      "venue_or_source": "arXiv",
+      "why_it_matters_for_novelty": "Provides another prior example of dense, step-wise reward formulations in RLVR to combat overconfidence and sparsity.",
+      "year": 2024
+    }
+  ],
+  "search_confidence": "High",
+  "strongest_novelty_defense": "While step-level supervision exists (e.g., PRMs), it typically requires expensive human annotations, model-intrinsic rollouts, or separate reward models. The submission introduces a uniquely formulated 'geometric reward' that intrinsically balances accuracy and refusal based on the model's baseline capability. It directly modulates the GRPO advantage at the token level using an objective verifier, eliminating the need for a separately trained PRM. This integration of objective evidence verification directly into the PPO/GRPO advantage calculation is structurally novel and supported by theoretical proofs avoiding degenerate collapse.",
+  "title": "FaithRL: Learning to Reason Faithfully through Step-Level Faithfulness Maximization"
+}
