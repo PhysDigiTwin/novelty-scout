@@ -1,0 +1,88 @@
+{
+  "_prior_scout": {
+    "max_paper_chars": 60000,
+    "model": "gemini-3-pro-preview",
+    "safe_queries": [
+      "routing models routers cost collapse prior work 2023 2024",
+      "cost collapse equirouter queries smaller prior work 2023 2024",
+      "queries smaller most model small prior work 2023 2024",
+      "routing models routers cost baseline methods",
+      "routing models routers cost related work survey"
+    ]
+  },
+  "leakage_discard_log": [
+    "Google Search for 'cost collapse equirouter queries smaller prior work 2023 2024' returned articles directly discussing EquiRouter and the paper 'When Routing Collapses: On the Degenerate Convergence of LLM Routers' itself (arXiv:2602.03478). These sources were discarded to prevent leakage of the paper's post-publication status or reception."
+  ],
+  "missing_or_underemphasized_citations": [
+    "The extensive literature on 'routing collapse' or 'expert collapse' in Mixture-of-Experts (MoE) architectures (e.g., Shazeer et al., Switch Transformer, etc.). While the submission focuses on external multi-LLM routing, the core phenomenon of a router degenerating to select only the most 'capable' or frequently used option is highly analogous to MoE routing collapse. Failing to draw this parallel might lead to an overclaim of novelty regarding 'uncovering' this failure mode."
+  ],
+  "novelty_risks": [
+    "The term 'routing collapse' and the general phenomenon of routers ignoring alternatives are heavily studied in MoE literature (expert collapse). Claiming to 'uncover' this failure mode without contextualizing it within the broader routing literature could be seen as an overclaim.",
+    "The idea of learning rankings rather than scalar scores is a standard technique in Learning-to-Rank (LTR) and recommendation systems. Applying pairwise ranking loss to models instead of documents is a straightforward adaptation."
+  ],
+  "overlap_assessment": "The paper's identification of 'routing collapse' in multi-LLM routing is a valuable empirical observation, but it is conceptually identical to 'expert collapse' in Mixture-of-Experts (MoE). The proposed solution, EquiRouter, which learns model rankings directly rather than scalar predictions, appears novel in the specific context of external multi-LLM routing. Previous works like RouteLLM and HybridLLM rely on predicting absolute scores, which the authors convincingly argue leads to decision fragility. The paper successfully extends a known internal architecture problem (MoE routing collapse) to external API/model routing and proposes a discrete-aware ranking solution.",
+  "paper_id": "1aa1c911-a5d3-4b21-b31e-ae3a61e3e411",
+  "queries_used": [
+    "routing models routers cost collapse prior work 2023 2024",
+    "cost collapse equirouter queries smaller prior work 2023 2024",
+    "queries smaller most model small prior work 2023 2024",
+    "routing models routers cost baseline methods",
+    "routing models routers cost related work survey",
+    "routing collapse MoE mixture of experts"
+  ],
+  "relevant_prior_work": [
+    {
+      "key_idea": "Uses human preference data to train routers that decide between a strong and a weak model based on scalar performance prediction.",
+      "relation_to_submission": "A state-of-the-art baseline router that predicts scalar utility scores rather than learning direct model rankings.",
+      "source_evidence": "Identified via Google Search for 'routing models routers cost baseline methods LLM'.",
+      "title": "RouteLLM: Learning to route LLMs from preference data",
+      "url": "https://arxiv.org/abs/2406.18665",
+      "venue_or_source": "ICLR",
+      "why_it_matters_for_novelty": "It represents the standard 'objective-decision mismatch' paradigm that EquiRouter seeks to improve upon.",
+      "year": 2024
+    },
+    {
+      "key_idea": "Proposes a routing framework to predict query difficulty and route easy queries to smaller models and hard ones to larger models using scalar performance prediction.",
+      "relation_to_submission": "Another direct baseline that the paper compares against, exemplifying the scalar score prediction vulnerability.",
+      "source_evidence": "Identified via Google Search for 'routing models routers cost baseline methods LLM'.",
+      "title": "Hybrid LLM: Cost-efficient and quality-aware query routing",
+      "url": "https://arxiv.org/abs/2402.17463",
+      "venue_or_source": "ICLR",
+      "why_it_matters_for_novelty": "Serves as a key comparative baseline that suffers from the routing collapse phenomenon described in the submission.",
+      "year": 2024
+    },
+    {
+      "key_idea": "Introduces LLM Cascades to sequentially call models from cheapest to most expensive, demonstrating that smaller models can effectively answer a large majority of user queries.",
+      "relation_to_submission": "Establishes the fundamental premise that small models are capable, which routing collapse undermines.",
+      "source_evidence": "Identified via Google Search for 'queries smaller most model small prior work 2023 2024 routing LLM'.",
+      "title": "FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance",
+      "url": "https://arxiv.org/abs/2305.05176",
+      "venue_or_source": "arXiv",
+      "why_it_matters_for_novelty": "Provides the foundational motivation for why under-utilizing small models is a severe failure mode in LLM routing.",
+      "year": 2023
+    },
+    {
+      "key_idea": "Provides a large-scale benchmark and standard experimental protocol for evaluating routing methods.",
+      "relation_to_submission": "The submission uses RouterBench for its empirical analysis and identifies that existing routers collapse on this benchmark.",
+      "source_evidence": "Identified via Google Search for related work.",
+      "title": "RouterBench: A Benchmark for Multi-LLM Routing System",
+      "url": "https://arxiv.org/abs/2403.12031",
+      "venue_or_source": "arXiv",
+      "why_it_matters_for_novelty": "It is the primary testbed for the submission, defining the 'small-margin regime' that triggers the collapse.",
+      "year": 2024
+    },
+    {
+      "key_idea": "Describes 'expert collapse' (or routing collapse) in Mixture-of-Experts, where a router consistently assigns all tokens to a small subset of experts, ignoring others.",
+      "relation_to_submission": "The submission claims to 'uncover a pervasive yet underexplored failure mode' called 'routing collapse' in LLM routers. However, the exact same phenomenon and terminology are well-known in internal MoE routing.",
+      "source_evidence": "Identified via Google Search for 'routing collapse MoE mixture of experts'.",
+      "title": "Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer",
+      "url": "https://arxiv.org/abs/1701.06538",
+      "venue_or_source": "ICLR",
+      "why_it_matters_for_novelty": "The submission might be overclaiming the novelty of 'uncovering' routing collapse, as the conceptual mechanism (a router ignoring smaller/other options due to feedback/decision loops) is a foundational challenge in MoE architectures.",
+      "year": 2017
+    }
+  ],
+  "search_confidence": "High",
+  "strongest_novelty_defense": "While routing collapse is known in MoE, its manifestation in multi-LLM API routing due to an 'objective-decision mismatch' (scalar training vs. discrete argmax deployment under budget constraints) is a novel diagnosis. EquiRouter provides a concrete, empirically validated solution tailored to the multi-LLM setting by using query-conditioned model representations and a pairwise ranking loss. Furthermore, the introduction of the Routing Collapse Index (RCI) is a novel metric specifically designed for this external routing context.",
+  "title": "When Routing Collapses: On the Degenerate Convergence of LLM Routers"
+}
