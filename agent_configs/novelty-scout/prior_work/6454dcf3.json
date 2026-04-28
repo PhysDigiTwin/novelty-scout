@@ -1,0 +1,69 @@
+{
+  "_prior_scout": {
+    "max_paper_chars": 60000,
+    "model": "gemini-3-pro-preview",
+    "safe_queries": [
+      "domains general reasoning where verifiers prior work 2023 2024",
+      "where verifiers answers rlvr effective prior work 2023 2024",
+      "rlvr effective large language models prior work 2023 2024",
+      "domains general reasoning where baseline methods",
+      "domains general reasoning where related work survey"
+    ]
+  },
+  "leakage_discard_log": [],
+  "missing_or_underemphasized_citations": [
+    {
+      "rationale": "While the submission cites deepseek-r1, citing earlier 2023 work like Math-Shepherd would better ground the historical progression of automated verifiable rewards.",
+      "title": "Math-Shepherd: Verify and Reinforce LLMs Step-by-step without Human Annotations"
+    },
+    {
+      "rationale": "The submission's methodology aligns closely with the shift towards outcome-based RL without a critic model (GRPO). While deepseek-r1 is cited, the foundational GRPO work from 2024 is highly relevant to the efficient computation of RLVR objectives discussed in the paper.",
+      "title": "DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models"
+    }
+  ],
+  "novelty_risks": "The core conceptual novelty is moderate-to-low due to the simultaneous explosion of perplexity/likelihood-based intrinsic rewards for RLVR (VeriFree, Nover, RLPR). The risk is that CER is viewed merely as an incremental mathematical reformulation of reference-answer perplexity rather than a fundamentally new paradigm.",
+  "overlap_assessment": "The submission tackles the exact same highly competitive problem as several concurrent works (General-Reasoner, VeriFree, Nover, RLPR): extending RLVR beyond rule-based math/code domains to general reasoning. Its overlap with 'VeriFree' and 'Nover' is conceptually high, as both leverage the likelihood/perplexity of the reference answer under the policy model as a continuous reward. However, the submission distinguishes itself mathematically by formulating the reward as the expected likelihood of the reference answer conditioned on the generated answer, evaluated over policy samples.",
+  "paper_id": "6454dcf3-6eff-4b23-b5be-9bfaa905a83a",
+  "queries_used": [
+    "domains general reasoning where verifiers prior work 2023 2024",
+    "where verifiers answers rlvr effective prior work 2023 2024",
+    "rlvr effective large language models prior work 2023 2024",
+    "domains general reasoning where baseline methods",
+    "domains general reasoning where related work survey"
+  ],
+  "relevant_prior_work": [
+    {
+      "key_idea": "Demonstrated that supervising the process (each reasoning step) significantly outperforms supervising only the outcome, establishing the standard for verifiable reasoning.",
+      "relation_to_submission": "The submission builds on this foundational RLVR paradigm but aims to replace the need for domain-specific rule-based verifiers with an intrinsic soft reward.",
+      "source_evidence": "Search results indicate this paper is the seminal work establishing Process Reward Models (PRMs) and the basis for modern RLVR.",
+      "title": "Let's Verify Step by Step",
+      "url": "https://arxiv.org/abs/2305.20050",
+      "venue_or_source": "OpenAI",
+      "why_it_matters_for_novelty": "It defines the traditional rule-based verification baseline that the submission attempts to generalize to broader domains.",
+      "year": 2023
+    },
+    {
+      "key_idea": "Introduced a step-checker or verifier capable of verifying mathematical reasoning without human annotations, scaling automated verification.",
+      "relation_to_submission": "Addresses the bottleneck of human annotation in reward modeling, similar to how the submission addresses the bottleneck of manual verification rules.",
+      "source_evidence": "Search results identify it as a pivotal paper moving away from RLHF toward deterministic verification.",
+      "title": "Math-Shepherd: Verify and Reinforce LLMs Step-by-step without Human Annotations",
+      "url": "https://arxiv.org/abs/2312.08935",
+      "venue_or_source": "NeurIPS",
+      "why_it_matters_for_novelty": "Highlights earlier 2023 efforts to automate verification, contextualizing the submission's goal of making verification implicit and domain-agnostic.",
+      "year": 2023
+    },
+    {
+      "key_idea": "Proposes a generative model-based verifier to handle soft or open-ended answers in general domains like physics and chemistry.",
+      "relation_to_submission": "A concurrent baseline that the submission explicitly compares against. It uses an external auxiliary model (General-verifier) whereas the submission uses the policy model itself.",
+      "source_evidence": "Identified in searches as the key work addressing the 'verification gap' in non-mathematical domains.",
+      "title": "General-Reasoner: Advancing LLM Reasoning Across All Domains",
+      "url": "https://arxiv.org/abs/2505.14652",
+      "venue_or_source": "arXiv",
+      "why_it_matters_for_novelty": "It represents the primary alternative approach (model-based) to solving the same problem (generalizing RLVR).",
+      "year": 2025
+    }
+  ],
+  "search_confidence": "High. The search successfully mapped the 2023-2024 foundational landscape of RLVR (PRMs, step-verification) and confirmed the recent 2025 shift toward general domain verification, perfectly contextualizing the submission.",
+  "strongest_novelty_defense": "The submission's strongest defense lies in its rigorous theoretical grounding (proving CER is a smooth relaxation of exact-match and demonstrating self-consistency amplification) and its elegant, zero-overhead empirical estimator that reuses policy gradient samples. This specific formulation provides a more principled probabilistic interpretation than ad-hoc perplexity normalization techniques.",
+  "title": "Reinforcement Learning with Conditional Expectation Reward"
+}
