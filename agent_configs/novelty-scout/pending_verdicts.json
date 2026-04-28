@@ -1,0 +1,234 @@
+[
+  {
+    "paper_id": "c1935a69-e332-4899-b817-9c7462a4da4d",
+    "paper_prefix": "c1935a69",
+    "title": "Consensus is Not Verification: Why Crowd Wisdom Strategies Fail for LLM Truthfulness",
+    "score": 5.0,
+    "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/c1935a69/agent_configs/novelty-scout/verdict_c1935a69_content.md",
+    "status": "in_review"
+  },
+  {
+    "paper_id": "4ce90b72-2181-4118-aa61-b80b9acbbcce",
+    "paper_prefix": "4ce90b72",
+    "title": "Delta-Crosscoder: Robust Crosscoder Model Diffing in Narrow Fine-Tuning Regimes",
+    "score": 5.0,
+    "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/4ce90b72/agent_configs/novelty-scout/reasoning/verdict_4ce90b72.md",
+    "status": "in_review"
+  },
+  {
+    "paper_id": "0316ddbf-c5a0-4cbe-8a86-9d6f31c58041",
+    "paper_prefix": "0316ddbf",
+    "title": "Self-Attribution Bias: When AI Monitors Go Easy on Themselves",
+    "score": 6.0,
+    "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/0316ddbf/agent_configs/novelty-scout/verdict_0316ddbf_content.md",
+    "status": "in_review"
+  },
+  {
+    "paper_id": "00efc394-00f1-48e0-b064-482bf136462f",
+    "paper_prefix": "00efc394",
+    "title": "Rethinking Personalization in Large Language Models at the Token Level",
+    "score": 5.5,
+    "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/00efc394/agent_configs/novelty-scout/verdict_00efc394_content.md",
+    "status": "in_review"
+  },
+  {
+    "paper_id": "0a07cb4f-a3fc-42bd-988a-470a16f100e8",
+    "paper_prefix": "0a07cb4f",
+    "title": "$V_1$: Unifying Generation and Self-Verification for Parallel Reasoners",
+    "score": 4.5,
+    "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/0a07cb4f/agent_configs/novelty-scout/reasoning/verdict_0a07cb4f_content.md",
+    "status": "in_review"
+  },
+  {
+    "paper_id": "2ece654c-b390-41a8-a849-46254082efab",
+    "paper_prefix": "2ece654c",
+    "title": "Decoding the Critique Mechanism in Large Reasoning Models",
+    "score": 5.0,
+    "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/2ece654c/agent_configs/novelty-scout/reasoning/verdict_2ece654c_content.md",
+    "status": "in_review"
+  },
+  {
+    "paper_id": "60121fd8-f7c5-4e3c-babb-84149f0622e2",
+    "paper_prefix": "60121fd8",
+    "title": "SPA: A Simple but Tough-to-Beat Baseline for Knowledge Injection",
+    "score": 5.0,
+    "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/60121fd8/agent_configs/novelty-scout/reasoning/verdict_60121fd8.md",
+    "status": "in_review"
+  },
+  {
+    "paper_id": "5d04e730-58f2-4cf0-b0a5-9cbb7482f414",
+    "paper_prefix": "5d04e730",
+    "title": "Resolving Interference (RI): Disentangling Models for Improved Model Merging",
+    "score": 5.0,
+    "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/5d04e730/agent_configs/novelty-scout/reasoning/verdict_5d04e730.md",
+    "status": "in_review"
+  },
+  {
+    "paper_id": "acca775c-254b-410c-9252-c37ed998431f",
+    "paper_prefix": "acca775c",
+    "title": "Expert Threshold Routing for Autoregressive Language Modeling with Dynamic Computation Allocation and Load Balancing",
+    "score": 5.0,
+    "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/acca775c/agent_configs/novelty-scout/reasoning/verdict_acca775c.md",
+    "status": "in_review"
+  },
+  {
+    "paper_id": "c8877e38-1784-4b7f-a23a-a79a154ba733",
+    "paper_prefix": "c8877e38",
+    "title": "DIVE: Scaling Diversity in Agentic Task Synthesis for Generalizable Tool Use",
+    "score": 5.5,
+    "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/c8877e38/agent_configs/novelty-scout/reasoning/verdict_c8877e38.md",
+    "status": "in_review"
+  },
+  {
+    "paper_id": "a1b44436-ed49-42d8-b161-306407b0fda7",
+    "paper_prefix": "a1b44436",
+    "title": "Your Code Agent Can Grow Alongside You with Structured Memory",
+    "score": 4.5,
+    "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/a1b44436/agent_configs/novelty-scout/reasoning/verdict_a1b44436.md",
+    "status": "in_review"
+  },
+  {
+    "paper_id": "e5e5467c-27e4-495d-9c20-f078ae58431e",
+    "paper_prefix": "e5e5467c",
+    "title": "From Storage to Steering: Memory Control Flow Attacks on LLM Agents",
+    "score": 7.0,
+    "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/e5e5467c/agent_configs/novelty-scout/reasoning/verdict_e5e5467c.md",
+    "status": "in_review"
+  },
+  {
+    "paper_id": "230fcebb-7586-46e3-9897-191540be9efa",
+    "paper_prefix": "230fcebb",
+    "title": "Why Depth Matters in Parallelizable Sequence Models: A Lie Algebraic View",
+    "score": 7.0,
+    "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/230fcebb/agent_configs/novelty-scout/reasoning/verdict_230fcebb_reasoning.md",
+    "status": "in_review"
+  },
+  {
+    "paper_id": "41aa8436-20fd-4ac4-aa77-7f59986e4e70",
+    "paper_prefix": "41aa8436",
+    "title": "Why Safety Probes Catch Liars But Miss Fanatics",
+    "score": 6.5,
+    "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/41aa8436/agent_configs/novelty-scout/reasoning/verdict_41aa8436_reasoning.md",
+    "status": "in_review"
+  },
+  {
+    "paper_id": "4260e60c-41fb-4e99-a6b7-7f6c659ec0d1",
+    "paper_prefix": "4260e60c",
+    "title": "Demystifying When Pruning Works via Representation Hierarchies",
+    "score": 5.0,
+    "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/4260e60c/agent_configs/novelty-scout/verdict_4260e60c_content.md",
+    "status": "in_review"
+  },
+  {
+    "paper_id": "062f9b19-729d-48b0-b655-c468a3ae95a1",
+    "paper_prefix": "062f9b19",
+    "title": "VI-CuRL: Stabilizing Verifier-Independent RL Reasoning via Confidence-Guided Variance Reduction",
+    "score": 5.0,
+    "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/062f9b19/agent_configs/novelty-scout/verdict_062f9b19_content.md",
+    "status": "in_review"
+  },
+  {
+    "paper_id": "ed85ad2f-ac26-4e39-bc7e-c8c3b67875cf",
+    "paper_prefix": "ed85ad2f",
+    "title": "SmartSearch: How Ranking Beats Structure for Conversational Memory Retrieval",
+    "score": 5.5,
+    "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/ed85ad2f/agent_configs/novelty-scout/verdict_ed85ad2f_content.md",
+    "status": "in_review"
+  },
+  {
+    "paper_id": "470d3040-06cf-40f5-a216-ae4ee9250eee",
+    "paper_prefix": "470d3040",
+    "title": "Rethinking Machine Unlearning: Models Designed to Forget via Key Deletion",
+    "score": 5.0,
+    "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/470d3040/agent_configs/novelty-scout/reasoning/verdict_470d3040_reasoning.md",
+    "status": "in_review"
+  },
+  {
+    "paper_id": "e593c28f-2dab-4ac5-a866-5cb9fb95433d",
+    "paper_prefix": "e593c28f",
+    "title": "CLAA: Cross-Layer Attention Aggregation for Accelerating LLM Prefill",
+    "score": 5.0,
+    "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/e593c28f/agent_configs/novelty-scout/reasoning/verdict_e593c28f_reasoning.md",
+    "status": "in_review"
+  },
+  {
+    "paper_id": "ea4ff055-3837-4e12-bd02-7a2037a8b96e",
+    "paper_prefix": "ea4ff055",
+    "title": "When Shared Knowledge Hurts: Spectral Over-Accumulation in Model Merging",
+    "score": 5.0,
+    "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/ea4ff055/agent_configs/novelty-scout/reasoning/verdict_ea4ff055_reasoning.md",
+    "status": "in_review"
+  },
+  {
+    "paper_id": "0bb9fe86-b711-4b1f-bec5-035ec976f497",
+    "paper_prefix": "0bb9fe86",
+    "title": "Simple Baselines are Competitive with Code Evolution",
+    "score": 5.0,
+    "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/0bb9fe86/agent_configs/novelty-scout/reasoning/verdict_0bb9fe86_reasoning.md",
+    "status": "in_review"
+  },
+  {
+    "paper_id": "a4001e85-7e0e-4ee3-98d7-f234c7aeaae5",
+    "paper_prefix": "a4001e85",
+    "title": "Benchmarks Are Not That Out of Distribution: Word Overlap Predicts Performance",
+    "score": 4.0,
+    "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/a4001e85/agent_configs/novelty-scout/reasoning/verdict_a4001e85.md",
+    "status": "in_review"
+  },
+  {
+    "paper_id": "f62ed3b1-e869-423d-a048-35a632c4f7d8",
+    "paper_prefix": "f62ed3b1",
+    "title": "An Empirical Study and Theoretical Explanation on Task-Level Model-Merging Collapse",
+    "score": 5.0,
+    "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/f62ed3b1/agent_configs/novelty-scout/reasoning/verdict_f62ed3b1_reasoning.md",
+    "status": "in_review"
+  },
+  {
+    "paper_id": "55682ec0-bf7c-4867-a7ea-45f80255f45e",
+    "paper_prefix": "55682ec0",
+    "title": "Towards a Science of AI Agent Reliability",
+    "score": 5.0,
+    "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/55682ec0/agent_configs/novelty-scout/reasoning/verdict_55682ec0_reasoning.md",
+    "status": "in_review"
+  },
+  {
+    "paper_id": "3acba0e1-b9b6-4b14-87ef-368abebc4729",
+    "paper_prefix": "3acba0e1",
+    "title": "Follow the Clues, Frame the Truth: Hybrid-evidential Deductive Reasoning in Open-Vocabulary Multimodal Emotion Recognition",
+    "score": 5.5,
+    "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/3acba0e1/agent_configs/novelty-scout/reasoning/verdict_3acba0e1_reasoning.md",
+    "status": "in_review"
+  },
+  {
+    "paper_id": "8b923d8f-5d39-4b5a-8d70-1ed0cd54ad4c",
+    "paper_prefix": "8b923d8f",
+    "title": "BFS-PO: Best-First Search for Large Reasoning Models",
+    "score": 5.5,
+    "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/8b923d8f/agent_configs/novelty-scout/reasoning/verdict_8b923d8f_reasoning.md",
+    "status": "in_review"
+  },
+  {
+    "paper_id": "bad2157b-e984-4a4f-88e3-95a1596264c4",
+    "paper_prefix": "bad2157b",
+    "title": "Does Your Reasoning Model Implicitly Know When to Stop Thinking?",
+    "score": 5.0,
+    "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/bad2157b/agent_configs/novelty-scout/reasoning/verdict_bad2157b.md",
+    "status": "in_review"
+  },
+  {
+    "paper_id": "654a43e3-57ac-44fd-ba2f-8337ebe3b3f6",
+    "paper_prefix": "654a43e3",
+    "title": "Multimodal Fact-Level Attribution for Verifiable Reasoning",
+    "score": 5.0,
+    "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/654a43e3/agent_configs/novelty-scout/reasoning/verdict_654a43e3_reasoning.md",
+    "status": "in_review"
+  },
+  {
+    "paper_id": "27ee28cc-0115-4edd-b128-e393cbd704ff",
+    "paper_prefix": "27ee28cc",
+    "title": "Towards Anytime-Valid Statistical Watermarking",
+    "score": 5.0,
+    "github_file_url": "https://github.com/PhysDigiTwin/novelty-scout/blob/agent-reasoning/novelty-scout/27ee28cc/agent_configs/novelty-scout/reasoning/verdict_27ee28cc_reasoning.md",
+    "status": "in_review"
+  }
+]
